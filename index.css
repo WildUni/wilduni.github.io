@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(255,255,255,0.08) 0 1px,
+      transparent 1px 60px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.08) 0 1px,
+      transparent 1px 60px
+    ),
+    rgb(6, 2, 34); 
+}
+
+
+
+/* Layout */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8vh 8vw;
+}
+
+
+/* Navbar */
+header{
+    display: flex;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1; 
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2vw;
+    
+    padding: 6vh 4vw;
+    background: rgb(4, 1, 20);
+
+    color: lightgray;
+}
+
+
+.navbar > :first-child{
+    flex: 1
+}
+
+
+.navbar a{
+    display: inline-block;
+    text-decoration: none;
+    color: lightgray;
+    transition: transform 0.2s ease;
+}
+
+.navbar a:hover{
+    text-decoration: none;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Profile */
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12vh 8vw;
+    gap: 6vw;
+}
+
+
+.profile-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    max-width: 500px;
+}
+
+.profile-left h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+}
+
+.profile-info {
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-info a {
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.profile-info a:hover {
+    background: white;
+    color: black;
+    transform: translateY(-2px);
+}
+
+.profile-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    text-align: center;
+}
+
+.profile-img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.15);
+}
+
+
+.profile-text h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.profile-text p {
+    font-size: 0.95rem;
+    opacity: 0.7;
+    margin-top: 0.3rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    opacity: 0.75;
+    line-height: 1.5;
+}
+
+
+
+
+
+/*Tech Stack*/
+
+
+
+
+.tinted-bg{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
+.skills{
+    background-color: rgba;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+.skills h1 {
+    font-size: 2rem;
+    
+}
+.skills h2{
+    margin: 1vh 2vw;
+}
+.skills-wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: stretch;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.skill {
+    flex: 1;
+    max-width: 140px;      
+    min-width: 140px;       
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+    background: rgba(6, 2, 34, 0.95);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.2s ease;
+}
+
+.skill i {
+    font-size: 2.5rem;
+}
+
+.skill span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.skill:hover {
+    transform: translateY(-6px);
+    background: rgba(6, 2, 34, 0.9);
+}
+
+
+.courses-list {
+    width: 100%;
+    list-style: none;
+    padding: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;;
+}
+
+.course {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+    border-radius: 16px;
+    background: rgba(6, 2, 34, 0.95);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 2vh 1vw;
+    transition: all 0.2s ease;
+}
+
+.courses-list i {
+    font-size: 1.2rem;
+}
+
+.course:hover{
+    transform: scale(1.05);
+    background: rgba(6, 2, 34, 0.9);
+}
+
+
+
+
+
+
+.project a{
+    color: white;
+    font-weight: bold;
+}
+
+.projects h1 {
+    margin-bottom: 8vh;
+    font-size: 2rem;
+}
+
+.projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+}
+
+.project:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project img, .project video {
+    width: 45%;
+    max-width: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+.card {
+  position: relative;
+  display: inline-block;
+}
+
+.card img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+.preview {
+  position: absolute;
+  top: -5%;        
+  left: 50%;       
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+
+  width: 80%;
+  height:auto;
+}
+
+.preview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover .preview {
+  opacity: 1;
+}
+
+
+
+
+/* Text container */
+.project-description-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+/* Text styling */
+.project-description-container h2 {
+    margin-bottom: 1rem;
+}
+
+.project-description-container p {
+    opacity: 0.75;
+    line-height: 1.5;
+}
+
+
+/* TAG CONTAINER */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* INDIVIDUAL TAG */
+.tag {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+
+    color: white;
+    opacity: 0.85;
+}
+
+
+
+
+
+
+
+
+.wave {
+    width: 100vw;              /* force full viewport width */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);  /* escape centered layout */
+    overflow: hidden;
+    line-height: 0;
+    background: transparent;
+}
+
+.wave svg {
+    display: block;
+    width: 100%;
+    height: 120px;
+    background: transparent;
+}
+
+.wave .flipped{
+    transform: scaleY(-1);
+}
+
+
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.contact-header {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.contact-form label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  color: white;
+  padding: 2vh 1vw;
+}
+
+.contact-form button{
+    padding: 1vw 1vh;
+    border-radius: 10px;
+    background-color: rgb(6, 2, 34);
+    color: white;
+    transition: all ease 0.2s;
+}
+
+.contact-form button:hover{
+    background-color: beige;
+    color: rgb(6, 2, 34);
+    cursor: pointer;
+    transform: scale(1.01);
+}
+

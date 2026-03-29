@@ -1,0 +1,18 @@
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(255,255,255,0.08) 0 1px,
+      transparent 1px 60px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.08) 0 1px,
+      transparent 1px 60px
+    ),
+    black; 
+}
